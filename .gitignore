@@ -1,0 +1,18 @@
+# I use resilio-sync to develop across multiple computers
+.sync
+Icon?
+*.swp
+
+# This is just a symlink
+tabularasa/lib
+crossbuild/lib
+crossbuild/patches
+
+# Site-specific overrides
+buildworker/override.env
+
+# I've walked back on this decision
+build
+
+# None of that vscode nonsense
+.vscode
