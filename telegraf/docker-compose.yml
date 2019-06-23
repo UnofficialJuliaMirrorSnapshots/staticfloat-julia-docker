@@ -1,0 +1,13 @@
+version: '2.3'
+services:
+    telegraf:
+        build: .
+        volumes:
+            - /proc:/proc2
+            - /var/run/docker.sock:/var/run/docker.sock
+        environment:
+            - HOSTNAME=${HOSTNAME}
+            - PROJECT=${PROJECT}
+            - HOST_PROC=/proc2
+        network_mode: "host"
+        restart: unless-stopped
